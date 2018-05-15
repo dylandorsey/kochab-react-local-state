@@ -29,8 +29,8 @@ class App extends Component {
     // instead:
     this.setState({
       user: {
+        ...this.state.user,
         name: event.target.value,
-        place: this.state.user.place,
       }
     });
   }
@@ -40,7 +40,7 @@ class App extends Component {
     console.log('event.target.value', event.target.value);
     this.setState({
       user: {
-        name: this.state.user.name,
+        ...this.state.user,
         place: event.target.value,
       }
     });
